@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { Botao, Campo } from '../../styles'
-import { Header, Form } from './styles'
+import { Header, Form, CampoTelefone } from './styles'
 import { RootReducer } from '../../store'
 import { cadastrar } from '../../store/reducers/contato'
 import { FormEvent, useState } from 'react'
@@ -32,6 +32,7 @@ const Formulario = () => {
       setEmail('')
     }, 100)
   }
+
   return (
     <>
       <Header>
@@ -46,7 +47,8 @@ const Formulario = () => {
           placeholder="Nome"
           required
         />
-        <Campo
+        <CampoTelefone
+          mask="(99) 99999-9999"
           value={tel}
           onChange={(event) => setTel(event.target.value)}
           type="text"

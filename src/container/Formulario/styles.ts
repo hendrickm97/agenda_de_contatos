@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import InputMask from 'react-input-mask'
 
 export const Form = styled.form`
   display: flex;
@@ -18,4 +19,14 @@ export const Header = styled.header`
   h2 {
     font-weight: bold;
   }
+`
+export const CampoTelefone = styled(InputMask)`
+  padding: 8px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  color: #666666;
 `
